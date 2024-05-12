@@ -1,0 +1,98 @@
+.fixed-height-img {
+    width: 100%; /* Scalabil pe lățimea coloanei */
+    height: 300px; /* Înălțime fixă */
+    object-fit: cover; /* Evită deformarea imaginii */
+  }
+  /* Stiluri specifice pentru echipe */
+  .redbull .nav-link,
+  .redbull-alt .nav-link-redbull {
+    background-color: #1e41ff;
+    color: white;
+  }
+  .redbull-alt .nav-link,
+  .redbull .nav-link-redbull {
+    background-color: #0d25b9;
+    color: white;
+  }
+  .mercedes .nav-link,
+  .mercedes-alt .nav-link-mercedes {
+    background-color: #00d2be;
+    color: white;
+  }
+  .mercedes-alt .nav-link,
+  .mercedes .nav-link-mercedes {
+    background-color: #50e3c2;
+    color: white;
+  }
+  .mclaren .nav-link,
+  .mclaren-alt .nav-link-mclaren {
+    background-color: #ff8700;
+    color: white;
+  }
+  .mclaren-alt .nav-link,
+  .mclaren .nav-link-mclaren {
+    background-color: #e37000;
+    color: white;
+  }
+  /* Alte echipe pot fi adăugate aici */
+  .nav-link.active, .nav-link:hover {
+    opacity: 0.75;
+  }
+
+  body {
+    position: relative;
+    margin-top: 75px;
+    margin-left:0%;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-8 div {
+    height: 500px;
+  }
+  .navbar-custom {
+    background-color: red; /* roșu */
+  }
+  
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-nav .nav-link  {
+    color: #ffffff; /* alb */
+    font-size: 18px;
+  }
+  
+  .navbar-custom .navbar-brand img {
+    width: 200px; /* ajustați dimensiunea logo-ului aici */
+    margin-right: 10px;
+  }
+  
+  .navbar-custom .navbar-toggler-icon {
+    background-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler:focus,
+  .navbar-custom .navbar-toggler:hover {
+    background-color: #ffffff; /* alb */
+  }
+  
+  /* Stilizare pentru linkurile active */
+  .navbar-custom .navbar-nav .nav-link.active {
+    color: #dc0000; /* culoarea textului pentru linkul activ */
+    border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
+  }
+  
+  
+  /* Stilizare pentru chenarul linkului */
+  .navbar-custom .navbar-nav .nav-link {
+    border-radius: 5px; /* rotunjim marginile chenarului */
+    border: 2px solid transparent; /* setăm chenarul inițial transparent */
+  }
+  
+  /* Stilizare pentru chenarul linkului la hover */
+  .navbar-custom .navbar-nav .nav-link:hover {
+    border-color: #ffffff; /* culoarea chenarului la hover */
+  }

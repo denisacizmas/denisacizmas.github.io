@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clasament Formula 1</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+    th {
+        background-color: #f8f9fa;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(181, 101, 29, 0.5);
+        background-image: linear-gradient(to right, rgba(181, 101, 29, 0.5), transparent);
+    }
+    .table-striped tbody tr:nth-of-type(even) {
+        background-color: rgba(206, 140, 53, 0.5);
+        background-image: linear-gradient(to right, rgba(206, 140, 53, 0.5), transparent);
+    }
+    body {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('clasament.jpg'); /* Adaugă imaginea de fundal */
+    background-size: cover; /* Asigură că imaginea de fundal se întinde pentru a acoperi întreaga suprafață */
+    background-position: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .carousel-caption .country {
+    font-size: 1.5em; /* Mărimea fontului pentru țară */
+    font-family: 'Roboto', sans-serif; /* Font mai frumos și distinctiv */
+    margin-bottom: 20px; /* Spațiere între nume și țară */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Umbră pentru text */
+  }
+
+  h2 {
+    color: white;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mt-5 mb-4">Clasament Formula 1</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Poziție</th>
+                <th scope="col">Pilot</th>
+                <th scope="col">Echipă</th>
+                <th scope="col">Puncte</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Lewis Hamilton</td>
+                <td>Mercedes</td>
+                <td>312</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Max Verstappen</td>
+                <td>Red Bull Racing</td>
+                <td>292</td>
+            </tr>
+            <!-- Adăugați mai multe rânduri pentru ceilalți piloți -->
+            <!-- Exemplu de rânduri adăugate -->
+            <tr>
+                <th scope="row">3</th>
+                <td>Valtteri Bottas</td>
+                <td>Mercedes</td>
+                <td>201</td>
+            </tr>
+            <!-- Se adaugă mai multe rânduri pentru alți piloți -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

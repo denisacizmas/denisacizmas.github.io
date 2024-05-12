@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" url="http://f1_home.com">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula 1 Website - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <style>
+    .navbar-custom {
+        background-color: rgb(255, 0, 0);
+  }
+  
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-nav .nav-link  {
+    color: #ffffff; /* alb */
+    font-size: 18px;
+  }
+  
+  .navbar-custom .navbar-brand img {
+    width: 200px; /* ajustați dimensiunea logo-ului aici */
+    margin-right: 10px;
+  }
+  
+  .navbar-custom .navbar-toggler-icon {
+    background-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler:focus,
+  .navbar-custom .navbar-toggler:hover {
+    background-color: #ffffff; /* alb */
+  }
+  
+  /* Stilizare pentru linkurile active */
+  .navbar-custom .navbar-nav .nav-link.active {
+    color: #dc0000; /* culoarea textului pentru linkul activ */
+    border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
+  }
+  
+  
+  /* Stilizare pentru chenarul linkului */
+  .navbar-custom .navbar-nav .nav-link {
+    border-radius: 5px; /* rotunjim marginile chenarului */
+    border: 2px solid transparent; /* setăm chenarul inițial transparent */
+  }
+  
+  /* Stilizare pentru chenarul linkului la hover */
+  .navbar-custom .navbar-nav .nav-link:hover {
+    border-color: #ffffff; /* culoarea chenarului la hover */
+  }
+
+  body {
+    margin-top: 75px;
+  }
+
+  h5{
+    height:50px;
+    margin-left:700px;
+    color:#ffffff;
+    text-align: end;
+  }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand mr-auto" href="index.html">
+      <img src="f1_logo.png" alt="F1 Logo"> Formula One
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Pagina Principală</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="drivers.html">Piloți</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="piste.html">Piste</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="races.html">Curse</a>
+        </li>
+      </ul>
+    </div>
+    <div class="ml-auto">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container mt-4">
+    <br>
+    <h5>the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile</h5>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (Optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <div class="ab">
+    <h3>Clasament 2024</h3>
+    <p>Află câte puncte a acumulat pilotul tău favorit până acum în acest sezon</p>
+    <a href="clasament.html" class="ab-btn">Vezi clasament</a>
+</div>   
+</body>
+</html>

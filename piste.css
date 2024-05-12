@@ -1,0 +1,89 @@
+.navbar-custom {
+    background-color: rgba(255,0,0,0.2); /* roșu */
+  }
+  
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-nav .nav-link  {
+    color: #ffffff; /* alb */
+    font-size: 18px;
+  }
+  
+  .navbar-custom .navbar-brand img {
+    width: 200px; /* ajustați dimensiunea logo-ului aici */
+    margin-right: 10px;
+  }
+  
+  .navbar-custom .navbar-toggler-icon {
+    background-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler:focus,
+  .navbar-custom .navbar-toggler:hover {
+    background-color: #ffffff; /* alb */
+  }
+  
+  /* Stilizare pentru linkurile active */
+  .navbar-custom .navbar-nav .nav-link.active {
+    color: #dc0000; /* culoarea textului pentru linkul activ */
+    border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
+  }
+  
+  /* Stilizare pentru chenarul linkului */
+  .navbar-custom .navbar-nav .nav-link {
+    border-radius: 5px; /* rotunjim marginile chenarului */
+    border: 2px solid transparent; /* setăm chenarul inițial transparent */
+  }
+  
+  /* Stilizare pentru chenarul linkului la hover */
+  .navbar-custom .navbar-nav .nav-link:hover {
+    border-color: #ffffff; /* culoarea chenarului la hover */
+  }
+  
+  .carousel-item img {
+    height: 100vh; /* Asigură-te că imaginea acoperă întreaga înălțime a vizorului */
+    object-fit: cover; /* Asigură-te că imaginea acoperă spațiul fără să fie distorsionată */
+  }
+  
+  .carousel-caption{
+    position: absolute; /* Setează poziționarea absolută pentru a putea fi plasat */
+    top: 50%; /* Plasează chenarul la mijlocul imaginii pe verticală */
+    left: 50%; /* Plasează chenarul la mijlocul imaginii pe orizontală */
+    transform: translate(-50%, -50%); /* Ajustează poziționarea pentru a fi centrul chenarului */
+    text-align: center; /* Aliniază textul la centru */
+  }
+  
+  .carousel-caption h1 {
+    font-size: 3em; /* Mărimea fontului pentru numele pistei */
+    font-family: 'Roboto', sans-serif; /* Font mai frumos și distinctiv */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Umbră pentru text */
+  }
+  
+  .carousel-caption .country {
+    font-size: 1.5em; /* Mărimea fontului pentru țară */
+    font-family: 'Roboto', sans-serif; /* Font mai frumos și distinctiv */
+    margin-bottom: 20px; /* Spațiere între nume și țară */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Umbră pentru text */
+  }
+  
+  
+  .info-container {
+    margin: auto;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundal semi-transparent */
+    border-radius: 10px; /* Margini rotunjite */
+    padding: 20px; /* Padding pentru text */
+    color: white; /* Text alb pentru contrast */
+    font-family: 'Montserrat', sans-serif; /* Font elegant */
+    font-size: 16px; /* Mărimea fontului */
+  }
+  
+  .info-box {
+    max-width: 300px; /* Lățimea maximă a chenarului de informații */
+    max-height: 300px;
+  }
+  
+  

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>F1 Teams and Drivers 2021</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .navbar-custom {
+        background-color: rgb(67, 56, 56);
+  }
+  
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-nav .nav-link  {
+    color: #ffffff; /* alb */
+    font-size: 18px;
+  }
+  
+  .navbar-custom .navbar-brand img {
+    width: 200px; /* ajustați dimensiunea logo-ului aici */
+    margin-right: 10px;
+  }
+  
+  .navbar-custom .navbar-toggler-icon {
+    background-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border-color: #ffffff; /* alb */
+  }
+  
+  .navbar-custom .navbar-toggler:focus,
+  .navbar-custom .navbar-toggler:hover {
+    background-color: #ffffff; /* alb */
+  }
+  
+  /* Stilizare pentru linkurile active */
+  .navbar-custom .navbar-nav .nav-link.active {
+    color: #dc0000; /* culoarea textului pentru linkul activ */
+    border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
+  }
+  
+  
+  /* Stilizare pentru chenarul linkului */
+  .navbar-custom .navbar-nav .nav-link {
+    border-radius: 5px; /* rotunjim marginile chenarului */
+    border: 2px solid transparent; /* setăm chenarul inițial transparent */
+  }
+  
+  /* Stilizare pentru chenarul linkului la hover */
+  .navbar-custom .navbar-nav .nav-link:hover {
+    border-color: #ffffff; /* culoarea chenarului la hover */
+  }
+  body {
+    margin-top: 75px;
+    position: relative;
+    background-color: rgb(67, 56, 56);
+  }
+
+  ul.nav-pills {
+    margin-top: 75px;
+    top: 20px;
+    position: fixed;
+  }
+  div.col-8 div {
+    height: 500px;
+  }
+  .image-container img, .logo-container img {
+    width: 100%; /* Asigurați-vă că imaginea se potrivește containerului */
+    height: auto; /* Menține proporțiile imaginii */
+  }
+  .image-container {
+    width: 260px; /* Lățimea dorită pentru imagine */
+    height: 200px; /* Înălțimea dorită pentru imagine */
+    margin:auto;
+    float:right;
+  }
+  .logo-container {
+    width: 50px; /* Lățimea dorită pentru logo */
+    height: 50px; /* Înălțimea dorită pentru logo */
+    margin:auto;
+    float: left;
+  }
+
+.section-content {
+    border: 1px solid #000; /* Adaugă un chenar negru subțire */
+    box-shadow: -10px 10px 10px rgba(255, 255, 255, 0.5); /* Adaugă o umbră cu efect de estompare */
+    margin-bottom: 20px; /* Adaugă spațiu sub secțiune */
+    padding: 10px; /* Adaugă spațiu în interiorul secțiunii */
+}
+
+
+  /* Culori reprezentative pentru echipe */
+  .mercedes { background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0,210,190,0.5))}
+  .redbull { background: linear-gradient(to right, rgba(255, 255, 255, 0.5),  rgba(30, 65, 255, 0.5));}
+  .mclaren { background:linear-gradient(to right, rgba(255, 255, 255, 0.5),  rgba(255, 135, 0, 0.5));}
+  .alpine { background:linear-gradient(to right, rgba(255, 255, 255, 0.5),  rgba(239, 95, 182,0.5));}
+  .haas { background:linear-gradient(to right, rgba(255, 255, 255, 0.5),  rgba(232, 86, 86,0.5));}
+  /* Adăugați aici alte culori pentru restul echipelor */
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-auto" href="index.html">
+        <img src="f1_logo.png" alt="F1 Logo"> Formula One
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Pagina Principală</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="drivers.html">Piloți</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="piste.html">Piste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="races.html">Curse</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-2 col-4" id="myScrollspy">
+      <ul class="nav nav-pills flex-column">
+        <!-- Mercedes -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-outline-info" data-toggle="dropdown" href="#">Mercedes AMG Petronas</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#mercedes1">Lewis Hamilton</a>
+            <a class="dropdown-item" href="#mercedes2">George Russell</a>
+          </div>
+        </li>
+        <!-- Red Bull Racing -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#">Oracle Red Bull Racing</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#redbull1">Max Verstappen</a>
+            <a class="dropdown-item" href="#redbull2">Sergio Perez</a>
+          </div>
+        </li>
+        <!-- McLaren -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-outline-warning" data-toggle="dropdown" href="#">McLaren</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#mclaren1">Lando Norris</a>
+            <a class="dropdown-item" href="#mclaren2">Oscar Piastri</a>
+          </div>
+        </li>
+        <!-- Adăugați aici alte echipe -->
+         <!-- Ferrari -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-danger" data-toggle="dropdown" href="#">Scuderia Ferrari</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Charles Leclerc</a>
+              <a class="dropdown-item" href="#ferrari2">Carlos Sainz</a>
+            </div>
+          </li>
+          <!-- Aston Martin -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-info" data-toggle="dropdown" href="#">Aston Martin Aramco</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Lance Stroll</a>
+              <a class="dropdown-item" href="#ferrari2">Fernando Alonso</a>
+            </div>
+          </li>
+          <!-- Alpine -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-light" data-toggle="dropdown" href="#">BWT Alpine</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Pierre Gasly</a>
+              <a class="dropdown-item" href="#ferrari2">Esteban Ocon</a>
+            </div>
+          </li>
+          <!-- Williams -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-info" data-toggle="dropdown" href="#">Williams Racing</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Logan Sargeant</a>
+              <a class="dropdown-item" href="#ferrari2">Alexander Albon</a>
+            </div>
+          </li>
+          <!-- Visa -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-primary" data-toggle="dropdown" href="#">Visa Cash App RB</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Daniel Ricciardo</a>
+              <a class="dropdown-item" href="#ferrari2">Yuki Tsunoda</a>
+            </div>
+          </li>
+          <!-- Sauber -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-success" data-toggle="dropdown" href="#">Stake Kick Sauber</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Zhou Guanyu</a>
+              <a class="dropdown-item" href="#ferrari2">Valtteri Bottas</a>
+            </div>
+          </li>
+          <!-- Haas -->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-outline-light" data-toggle="dropdown" href="#">MoneyGram Haas</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#ferrari1">Kevin Magnussen</a>
+              <a class="dropdown-item" href="#ferrari2">Nico Hulkenberg</a>
+            </div>
+          </li>
+      </ul>
+    </nav>
+    <div class="col-sm-10 col-8">
+      <!-- Mercedes -->
+      <div id="mercedes1" class="mercedes section-content">    
+        <div class="logo-container">
+          <img src="norrislogo.png" alt="Logo Mercedes">
+        </div>
+        <div class="image-container">
+          <img src="lewis.png" alt="Pilot Mercedes 1">
+        </div>
+        <h1>Lewis Hamilton</h1>
+        <h6>Team: Red Bull Racing</h6>
+        <p>Country: Netherlands</p>
+        <p>Podiums: 103</p>
+        <p>Points: 2722.5</p>
+        <p>Grands Prix entered: 191</p>
+        <p>World Championships: 3</p>
+        <p>Highest race finish: 1 (x58)</p>
+        <p>Highest grid position: 1</p>
+        <p>Date of birth: 30/09/1997</p>
+        <p>Place of birth: Hasselt, Belgium</p>
+      </div>
+      <div id="mercedes2" class="mercedes section-content"> 
+        <div class="logo-container">
+          <img src="norrislogo.png" alt="Logo Mercedes">
+        </div>
+        <div class="image-container">
+          <img src="russell.png" alt="Pilot Mercedes 2">
+        </div>
+        <h1>George Russell</h1>
+        <h6>Team: Red Bull Racing</h6>
+        <p>Country: Netherlands</p>
+        <p>Podiums: 103</p>
+        <p>Points: 2722.5</p>
+        <p>Grands Prix entered: 191</p>
+        <p>World Championships: 3</p>
+        <p>Highest race finish: 1 (x58)</p>
+        <p>Highest grid position: 1</p>
+        <p>Date of birth: 30/09/1997</p>
+        <p>Place of birth: Hasselt, Belgium</p>
+      </div>        
+      <!-- Red Bull Racing -->
+      <div id="redbull1" class="redbull section-content">         
+        <div class="logo-container">
+          <img src="maxlogo.png" alt="Logo Red Bull">
+        </div>
+        <div class="image-container">
+          <img src="max.png" alt="Pilot Red Bull 1">
+        </div>
+        <h1>Max Verstappen</h1>
+        <h6>Team: Red Bull Racing</h6>
+        <p>Country: Netherlands</p>
+        <p>Podiums: 103</p>
+        <p>Points: 2722.5</p>
+        <p>Grands Prix entered: 191</p>
+        <p>World Championships: 3</p>
+        <p>Highest race finish: 1 (x58)</p>
+        <p>Highest grid position: 1</p>
+        <p>Date of birth: 30/09/1997</p>
+        <p>Place of birth: Hasselt, Belgium</p>
+      </div>
+      <div id="redbull2" class="redbull section-content">         
+        <div class="logo-container">
+          <img src="perezlogo.png" alt="Logo Red Bull">
+        </div>
+        <div class="image-container">
+          <img src="perez.png" alt="Pilot Red Bull 2">
+        </div>
+
+        <h1>Sergio Perez</h1>
+        <h6>Team: Red Bull Racing</h6>
+        <p>Country: Netherlands</p>
+        <p>Podiums: 103</p>
+        <p>Points: 2722.5</p>
+        <p>Grands Prix entered: 191</p>
+        <p>World Championships: 3</p>
+        <p>Highest race finish: 1 (x58)</p>
+        <p>Highest grid position: 1</p>
+        <p>Date of birth: 30/09/1997</p>
+        <p>Place of birth: Hasselt, Belgium</p>
+      </div>
+      <!-- McLaren -->
+      <div id="mclaren1" class="mclaren section-content">         
+        <div class="logo-container">
+          <img src="norrislogo.png" alt="Logo McLaren">
+        </div>
+        <div class="image-container">
+          <img src="norris.png" alt="Pilot McLaren 1">
+        </div>
+        <h1>Lando Norris</h1>
+        <h6>Team: Red Bull Racing</h6>
+        <p>Country: Netherlands</p>
+        <p>Podiums: 103</p>
+        <p>Points: 2722.5</p>
+        <p>Grands Prix entered: 191</p>
+        <p>World Championships: 3</p>
+        <p>Highest race finish: 1 (x58)</p>
+        <p>Highest grid position: 1</p>
+        <p>Date of birth: 30/09/1997</p>
+        <p>Place of birth: Hasselt, Belgium</p>
+      </div>      
+      <div id="mclaren2" class="mclaren section-content">         
+        <div class="logo-container">
+          <img src="max.jpg" alt="Logo McLaren">
+        </div>
+        <div class="image-container">
+          <img src="max.jpg" alt="Pilot McLaren 2">
+        </div>
+        <h1>Oscar Piastri</h1>
+        <h6>Team: Red Bull Racing</h6>
+        <p>Country: Netherlands</p>
+        <p>Podiums: 103</p>
+        <p>Points: 2722.5</p>
+        <p>Grands Prix entered: 191</p>
+        <p>World Championships: 3</p>
+        <p>Highest race finish: 1 (x58)</p>
+        <p>Highest grid position: 1</p>
+        <p>Date of birth: 30/09/1997</p>
+        <p>Place of birth: Hasselt, Belgium</p>
+      </div>
+      <!-- Adăugați aici secțiuni pentru alți piloți -->
+    </div>
+  </div>
+</div>
+
+<script>
+    // Definește un obiect pentru a stoca frecvența apăsării pe link-uri
+    const linkCounter = {
+      "mercedes1": 0,
+      "mercedes2": 0,
+      "redbull1": 0,
+      "redbull2": 0,
+      "mclaren1": 0,
+      "mclaren2": 0,
+      // Adăugați aici alte secțiuni și inițializați frecvența lor cu 0
+    };
+  
+    // Funcție pentru a rearanja secțiunile în funcție de frecvența apăsării
+    function rearrangeSections() {
+      const sections = document.querySelectorAll('.section-content');
+      // Creează un array din secțiuni pentru a le sorta în funcție de frecvență
+      const sortedSections = Array.from(sections).sort((a, b) => {
+        const idA = a.id;
+        const idB = b.id;
+        return linkCounter[idB] - linkCounter[idA];
+      });
+  
+      // Rearanjează secțiunile în DOM în ordinea sortată
+      sortedSections.forEach(section => {
+        section.parentNode.appendChild(section);
+      });
+    }
+  
+    // Funcție pentru a incrementa contorul la apăsarea unui link
+    function incrementCounter(sectionId) {
+      linkCounter[sectionId]++;
+      rearrangeSections(); // Rearanjează secțiunile după incrementarea contorului
+    }
+  
+    // Adaugă un eveniment de click pentru fiecare link din bara de navigare
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        const sectionId = this.getAttribute('href').substring(1); // Obține ID-ul secțiunii fără simbolul #
+        incrementCounter(sectionId); // Incrementare contor la apăsarea link-ului
+      });
+    });
+  
+    // Rearanjează inițial secțiunile la încărcarea paginii
+    rearrangeSections();
+  </script>
+  
+
+</body>
+</html>
