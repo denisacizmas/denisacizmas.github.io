@@ -59,31 +59,30 @@
   .carousel-caption h1 {
     font-size: 3em; /* Mărimea fontului pentru numele pistei */
     font-family: 'Roboto', sans-serif; /* Font mai frumos și distinctiv */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Umbră pentru text */
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.9); /* Umbră pentru text */
   }
   
   .carousel-caption .country {
     font-size: 1.5em; /* Mărimea fontului pentru țară */
     font-family: 'Roboto', sans-serif; /* Font mai frumos și distinctiv */
     margin-bottom: 20px; /* Spațiere între nume și țară */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Umbră pentru text */
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.9); /* Umbră pentru text */
   }
-  
-  
-  .info-container {
-    margin: auto;
-    float: right;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundal semi-transparent */
-    border-radius: 10px; /* Margini rotunjite */
-    padding: 20px; /* Padding pentru text */
-    color: white; /* Text alb pentru contrast */
-    font-family: 'Montserrat', sans-serif; /* Font elegant */
-    font-size: 16px; /* Mărimea fontului */
-  }
-  
   .info-box {
-    max-width: 300px; /* Lățimea maximă a chenarului de informații */
-    max-height: 300px;
+    position: fixed; /* Poziționare fixă pentru a fi plasat în afara fluxului normal al documentului */
+    bottom: 35px; /* Distanta de la partea de jos */
+    left: 35px; /* Distanta de la partea stanga */
+    background-color: rgba(200, 200, 200, 0.6); /* Culoarea de fundal semitransparenta */
+    padding: 20px; /* Spatierea interioara */
+    border-radius: 10px; /* Rotunjirea colturilor */
   }
-  
-  
+
+  /* Stiluri pentru textul din infobox */
+  .info-text {
+    font-family: Arial, sans-serif; /* Fontul textului */
+    font-size: 18px; /* Marimea textului */
+    color: #333; /* Culoarea textului */
+    font-weight: bold; /* Textul bold */
+    text-align: center; /* Alinierea textului */
+    text-shadow: 5px 5px 9px rgba(200, 200, 200, 0.9);
+  }

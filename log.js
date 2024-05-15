@@ -1,58 +1,70 @@
 // Funcție pentru validarea datelor de autentificare
-function validateLoginForm() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+function validateLoginForm(event) {
+    event.preventDefault(); // Previne comportamentul implicit de reîncărcare a paginii
 
-    // Validare pentru username (doar litere)
-    if (!/^[a-zA-Z]+$/.test(username)) {
-        showAlert('Username-ul trebuie să conțină doar litere!', 'danger');
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Verificare completare toate câmpurile
+    if (!validateRequiredFields('loginForm')) {
         return false;
     }
 
     // Validare pentru email (să conțină @ și .)
-    const email = document.getElementById('email').value;
     if (!/\S+@\S+\.\S+/.test(email)) {
         showAlert('Introduceți un email valid!', 'danger');
         return false;
     }
 
-    // Implementează logica de autentificare
-    // ...
+    const loginForm = document.getElementById('loginForm');
+    loginForm.classList.add('animated-left');
 
-    // Redirecționează către pagina index.html dacă totul este valid
-    window.location.href = 'index.html';
+    const loginContainer = document.querySelector('.col-md-6:nth-child(1)');
+    loginContainer.classList.add('animated-left');
+
+    // Asociem un eveniment de tranziție care va fi declanșat când animația se termină
+    loginForm.addEventListener('animationend', function() {
+        // Redirecționăm către pagina index.html
+        window.location.href = 'index.html';
+    });
 }
 
 // Funcție pentru validarea datelor de înregistrare
-function validateSignupForm() {
-    const newUsername = document.getElementById('new-username').value;
-    const newPassword = document.getElementById('new-password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
+function validateSignupForm(event) {
+    event.preventDefault(); // Previne comportamentul implicit de reîncărcare a paginii
 
-    // Validare pentru username (doar litere)
-    if (!/^[a-zA-Z]+$/.test(newUsername)) {
-        showAlert('Username-ul trebuie să conțină doar litere!', 'danger');
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    // Verificare completare toate câmpurile
+    if (!validateRequiredFields('signupForm')) {
+        return false;
+    }
+
+    // Validare pentru nume (doar litere)
+    if (!/^[a-zA-Z]+$/.test(name)) {
+        showAlert('Numele trebuie să conțină doar litere!', 'danger');
         return false;
     }
 
     // Validare pentru email (să conțină @ și .)
-    const newEmail = document.getElementById('new-email').value;
-    if (!/\S+@\S+\.\S+/.test(newEmail)) {
+    if (!/\S+@\S+\.\S+/.test(email)) {
         showAlert('Introduceți un email valid!', 'danger');
         return false;
     }
 
-    // Validare pentru parolă (să fie la fel cu confirmarea parolei)
-    if (newPassword !== confirmPassword) {
-        showAlert('Parolele nu se potrivesc!', 'danger');
-        return false;
-    }
+    const signupForm = document.getElementById('signupForm');
+    signupForm.classList.add('animated-right');
 
-    // Implementează logica de înregistrare
-    // ...
+    const signupContainer = document.querySelector('.col-md-6:nth-child(2)');
+    signupContainer.classList.add('animated-right');
 
-    // Redirecționează către pagina index.html dacă totul este valid
-    window.location.href = 'index.html';
+    // Asociem un eveniment de tranziție care va fi declanșat când animația se termină
+    signupForm.addEventListener('animationend', function() {
+        // Redirecționăm către pagina index.html
+        window.location.href = 'index.html';
+    });
 }
 
 // Funcție pentru afișarea alertelor
@@ -71,14 +83,23 @@ function showAlert(message, type) {
     }, 3000);
 }
 
+// Funcție pentru validarea completării tuturor câmpurilor
+function validateRequiredFields(formId) {
+    const form = document.getElementById(formId);
+    const inputs = form.querySelectorAll('input');
+
+    for (let i = 0; i < inputs.length; i++) {
+        if (!inputs[i].value.trim()) {
+            showAlert('Te rugăm să completezi toate câmpurile!', 'danger');
+            return false;
+        }
+    }
+
+    return true;
+}
+
 // Asociere eveniment pentru formularul de autentificare
-document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    validateLoginForm();
-});
+document.getElementById('loginForm').addEventListener('submit', validateLoginForm);
 
 // Asociere eveniment pentru formularul de înregistrare
-document.getElementById('signup-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    validateSignupForm();
-});
+document.getElementById('signupForm').addEventListener('submit', validateSignupForm);

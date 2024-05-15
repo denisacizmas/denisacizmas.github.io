@@ -1,71 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en" url="http://f1_home.com">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formula 1 Website - Home</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <style>
-    .navbar-custom {
-        background-color: rgb(255, 0, 0);
-  }
-  
-  .navbar-custom .navbar-brand,
-  .navbar-custom .navbar-nav .nav-link  {
-    color: #ffffff; /* alb */
-    font-size: 18px;
-  }
-  
-  .navbar-custom .navbar-brand img {
-    width: 200px; /* ajustați dimensiunea logo-ului aici */
-    margin-right: 10px;
-  }
-  
-  .navbar-custom .navbar-toggler-icon {
-    background-color: #ffffff; /* alb */
-  }
-  
-  .navbar-custom .navbar-toggler {
-    border-color: #ffffff; /* alb */
-  }
-  
-  .navbar-custom .navbar-toggler:focus,
-  .navbar-custom .navbar-toggler:hover {
-    background-color: #ffffff; /* alb */
-  }
-  
-  /* Stilizare pentru linkurile active */
-  .navbar-custom .navbar-nav .nav-link.active {
-    color: #dc0000; /* culoarea textului pentru linkul activ */
-    border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
-  }
-  
-  
-  /* Stilizare pentru chenarul linkului */
-  .navbar-custom .navbar-nav .nav-link {
-    border-radius: 5px; /* rotunjim marginile chenarului */
-    border: 2px solid transparent; /* setăm chenarul inițial transparent */
-  }
-  
-  /* Stilizare pentru chenarul linkului la hover */
-  .navbar-custom .navbar-nav .nav-link:hover {
-    border-color: #ffffff; /* culoarea chenarului la hover */
-  }
-
-  body {
-    margin-top: 75px;
-  }
-
-  h5{
-    height:50px;
-    margin-left:700px;
-    color:#ffffff;
-    text-align: end;
-  }
-  </style>
-  <!-- Google tag (gtag.js) -->
+  <title>F1 - Pagina principala</title>
+   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MC7FRKEJ7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -74,6 +15,10 @@
 
   gtag('config', 'G-8MC7FRKEJ7');
 </script>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+
 </head>
 <body>
   <!-- Navbar -->
@@ -106,20 +51,53 @@
   </div>
   </nav>
 
-  <!-- Content -->
+  <!-- CONTENT -->
   <div class="container mt-4">
     <br>
-    <h5>the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile</h5>
+    <h5 id="txt">the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile</h5>
   </div>
 
   <!-- Bootstrap JS and jQuery (Optional) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <div class="ab">
-    <h3>Clasament 2024</h3>
+  <div class="ab move-right" id="ab">
+    <h3>Clasament piloți 2024</h3>
     <p>Află câte puncte a acumulat pilotul tău favorit până acum în acest sezon</p>
-    <a href="clasament.html" class="ab-btn">Vezi clasament</a>
+    <a id="b1" href="clasament.html" class="btn btn-light">Vezi clasament</a>
+</div> 
+<div class="ab2 move-right" id="ab2">
+  <h3>Clasament constructori 2024</h3>
+  <p>Află câte puncte a acumulat echipa ta favorită până acum în acest sezon</p>
+  <a id="b2" href="clasament2.html" class="btn btn-light">Vezi clasament</a>
 </div>   
+
+<script>
+document.getElementById('b1').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('ab').classList.remove('move-right'); // Elimină clasa pentru mișcarea la dreapta
+    document.getElementById('ab').classList.add('move-left'); // Adaugă clasa pentru mișcarea la stânga
+    document.getElementById('ab2').classList.remove('move-right'); // Elimină clasa pentru mișcarea la dreapta
+    document.getElementById('ab2').classList.add('move-left'); // Adaugă clasa pentru mișcarea la stânga
+
+    setTimeout(function() {
+        window.location.href = event.target.href;
+    }, 500);
+});
+
+document.getElementById('b2').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('ab').classList.remove('move-right'); // Elimină clasa pentru mișcarea la dreapta
+    document.getElementById('ab').classList.add('move-left'); // Adaugă clasa pentru mișcarea la stânga
+    document.getElementById('ab2').classList.remove('move-right'); // Elimină clasa pentru mișcarea la dreapta
+    document.getElementById('ab2').classList.add('move-left'); // Adaugă clasa pentru mișcarea la stânga
+    setTimeout(function() {
+        window.location.href = event.target.href;
+    }, 500);
+});
+
+  </script>
+
+
 </body>
 </html>

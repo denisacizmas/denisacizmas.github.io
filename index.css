@@ -1,26 +1,66 @@
+.navbar-custom {
+    background-color: rgb(255, 0, 0);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link  {
+color: #ffffff; /* alb */
+font-size: 18px;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+font-family: Arial, sans-serif;
+}
+
+.navbar-custom .navbar-brand img {
+width: 200px; /* ajustați dimensiunea logo-ului aici */
+margin-right: 10px;
+}
+
+.navbar-custom .navbar-toggler-icon {
+background-color: #ffffff; /* alb */
+}
+
+.navbar-custom .navbar-toggler {
+border-color: #ffffff; /* alb */
+}
+
+.navbar-custom .navbar-toggler:focus,
+.navbar-custom .navbar-toggler:hover {
+background-color: #ffffff; /* alb */
+}
+
+/* Stilizare pentru linkurile active */
+.navbar-custom .navbar-nav .nav-link.active {
+color: #dc0000; /* culoarea textului pentru linkul activ */
+border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
+}
+
+
+/* Stilizare pentru chenarul linkului */
+.navbar-custom .navbar-nav .nav-link {
+border-radius: 5px; /* rotunjim marginile chenarului */
+border: 2px solid transparent; /* setăm chenarul inițial transparent */
+}
+
+/* Stilizare pentru chenarul linkului la hover */
+.navbar-custom .navbar-nav .nav-link:hover {
+border-color: #ffffff; /* culoarea chenarului la hover */
+}
+
+h5{
+height:50px;
+margin-left:700px;
+color:#ffffff;
+text-align: end;
+}
 body {
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('piste.png'); /* Adaugă imaginea de fundal */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.5)),url('fundal/bgClasament.jpg'); /* Adaugă imaginea de fundal */
     background-size: cover; /* Asigură că imaginea de fundal se întinde pentru a acoperi întreaga suprafață */
     background-position: center;
     position: relative;
     width: 100%;
     min-height: 100vh;
+    margin-top: 75px;
   }
-  .subheader
-{
-    height: 60vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(imagini/fundal2.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: white;
-}
-
-.subheader h1
-{
-    color: white;
-}
 
 .about
 {
@@ -75,18 +115,41 @@ body {
 {
     width: 100%;
 }
+
 .ab
 {
     margin: 80px 0;
-    background-image: linear-gradient(to right, rgba(61, 196, 208, 0.6), transparent),url(piste.png);
+    background-image: linear-gradient(to right, rgba(224, 93, 23, 0.9), transparent),url(fundal/bgHome.png);
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     padding: 5%;
     color: #fff;
+    animation: moveRight 1s forwards; /* Aplicăm animația */
+    transition: transform 1s; /* Adăugăm o tranziție pentru animația transform */
+}
+
+.ab2
+{
+    margin: 80px 0;
+    background-image: linear-gradient(to right, rgba(0, 239, 227, 0.6), transparent),url(fundal/bgConstructori.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+    animation: moveRight 1s forwards; /* Aplicăm animația */
+    transition: transform 1s; /* Adăugăm o tranziție pentru animația transform */
 }
 
 .ab h3
+{
+    font-size: 4vw;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+
+.ab2 h3
 {
     font-size: 4vw;
     line-height: 5.3vw;
@@ -98,16 +161,42 @@ body {
     font-size: 18px;
     margin: 10px 0;
     color: white;
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.9);
 }
 
-.ab-btn
+.ab2 p
 {
-    background: darkslategray;
-    border-color: lightslategray;
+    font-size: 18px;
+    margin: 10px 0;
     color: white;
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    margin-top: 20px;
-    display: inline-block;
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.9);
+}
+
+/* Animatie pentru alunecarea la stânga */
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animatie pentru alunecarea la dreapta */
+@keyframes moveRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Adaugă clasele pentru mișcarea la stânga și la dreapta */
+.move-left {
+    animation: moveLeft 1s forwards; /* Aplică animația pentru mișcarea la stânga */
+}
+
+.move-right {
+    animation: moveRight 1s forwards; /* Aplică animația pentru mișcarea la dreapta */
 }

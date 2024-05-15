@@ -4,68 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login / Sign Up</title>
-  <!-- Bootstrap CSS -->
+  <!-- BOOTSTRAP & CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="log.css">
-  <script src="log.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8MC7FRKEJ7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8MC7FRKEJ7');
-</script>
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <!-- Login Form -->
+        <!-- LOGIN -->
         <div class="form-container">
-          <h2>Login</h2>
-          <form id="loginForm" onsubmit="return validateLoginForm()">
+          <h2>Intră în cont</h2>
+          <form id="loginForm">
             <div class="form-group">
-              <label for="loginEmail">Email address</label>
-              <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+              <label for="loginEmail">Adresa de email</label>
+              <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Introdu emailul">
             </div>
             <div class="form-group">
-              <label for="loginPassword">Password</label>
-              <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+              <label for="loginPassword">Parolă</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Introdu parola">
             </div>
-            <button type="submit" class="btn btn-primary" href="index.html">Login</button>
+            <button type="submit" class="btn btn-primary">Conectează-te</button>
           </form>
         </div>
       </div>
       <div class="col-md-6">
         <!-- Sign Up Form -->
         <div class="form-container">
-          <h2>Sign Up</h2>
-          <form id="signupForm" onsubmit="return validateSignupForm()">
+          <h2>Creează un cont</h2>
+          <form id="signupForm">
             <div class="form-group">
-              <label for="signupName">Name</label>
-              <input type="text" class="form-control" id="signupName" placeholder="Enter name" required>
+              <label for="signupName">Username (doar litere, fără spații)</label>
+              <input type="text" class="form-control" id="signupName" placeholder="Creează-ți un username">
             </div>
             <div class="form-group">
-              <label for="signupEmail">Email address</label>
-              <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+              <label for="signupEmail">Adresă de email</label>
+              <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Introdu un email">
             </div>
             <div class="form-group">
-              <label for="signupPassword">Password</label>
-              <input type="password" class="form-control" id="signupPassword" placeholder="Password" required>
+              <label for="signupPassword">Parolă</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Introdu o parolă">
             </div>
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="submit" class="btn btn-primary">Înregistrează-te</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Bootstrap JS and jQuery (Optional) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <!-- JavaScript -->
+  <script src="log.js"></script>
 </body>
 </html>

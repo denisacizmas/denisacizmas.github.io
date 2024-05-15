@@ -2,7 +2,7 @@
 
 /* Stilizare pentru întregul document */
 body {
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('background_login.png'); /* Adaugă imaginea de fundal */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('fundal/bgLogin.png'); /* Adaugă imaginea de fundal */
     background-size: cover; /* Asigură că imaginea de fundal se întinde pentru a acoperi întreaga suprafață */
     background-position: center;
     position: relative;
@@ -86,3 +86,42 @@ body {
     color: #f1ab00;
   }
   
+ /* Stiluri pentru animația formularului de autentificare */
+.animated-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+/* Stiluri pentru animația formularului de înregistrare */
+.animated-right {
+    animation: slideRight 0.5s forwards;
+}
+
+/* Animatie pentru alunecarea la stanga */
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animatie pentru alunecarea la dreapta */
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Animatie pentru chenarul de autentificare */
+.col-md-6:nth-child(1).animated-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+/* Animatie pentru chenarul de înregistrare */
+.col-md-6:nth-child(2).animated-right {
+    animation: slideRight 0.5s forwards;
+}

@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white; /* Culoarea textului alb */
+    text-align: center; /* Aliniere pe centru */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Efect de umbră pentru text */
+}
+th {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    border-right: 1px solid white; /* Margini verticale albe */
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(34, 29, 181, 0.2);
+    background-image: linear-gradient(to right, rgba(34, 29, 181, 0.3), transparent);
+    color: white;
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(131, 174, 234, 0.2);
+    background-image: linear-gradient(to right, rgba(131, 174, 234, 0.3), transparent);
+    color: white;
+}
+body {
+background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url('fundal/bgClasament.jpg'); /* Adaugă imaginea de fundal */
+background-size: cover; /* Asigură că imaginea de fundal se întinde pentru a acoperi întreaga suprafață */
+background-position: center;
+position: relative;
+width: 100%;
+min-height: 100vh;
+}
+.carousel-caption .country {
+font-size: 1.5em; /* Mărimea fontului pentru țară */
+font-family: 'Roboto', sans-serif; /* Font mai frumos și distinctiv */
+margin-bottom: 20px; /* Spațiere între nume și țară */
+text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Umbră pentru text */
+}
+
+h2 {
+color: white;
+}
+/* Stilurile pentru coloana "Poziție" */
+.position-column {
+    width: 50px; /* sau orice altă valoare dorită pentru lățime */
+}
+
+.navbar-custom {
+    background-color: rgb(255, 0, 0);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link  {
+color: #ffffff; /* alb */
+font-size: 18px;
+}
+
+.navbar-custom .navbar-brand img {
+width: 200px; /* ajustați dimensiunea logo-ului aici */
+margin-right: 10px;
+}
+
+.navbar-custom .navbar-toggler-icon {
+background-color: #ffffff; /* alb */
+}
+
+.navbar-custom .navbar-toggler {
+border-color: #ffffff; /* alb */
+}
+
+.navbar-custom .navbar-toggler:focus,
+.navbar-custom .navbar-toggler:hover {
+background-color: #ffffff; /* alb */
+}
+
+/* Stilizare pentru linkurile active */
+.navbar-custom .navbar-nav .nav-link.active {
+color: #dc0000; /* culoarea textului pentru linkul activ */
+border: 2px solid #ffffff; /* chenar alb pentru linkul activ */
+}
+
+
+/* Stilizare pentru chenarul linkului */
+.navbar-custom .navbar-nav .nav-link {
+border-radius: 5px; /* rotunjim marginile chenarului */
+border: 2px solid transparent; /* setăm chenarul inițial transparent */
+}
+
+/* Stilizare pentru chenarul linkului la hover */
+.navbar-custom .navbar-nav .nav-link:hover {
+border-color: #ffffff; /* culoarea chenarului la hover */
+}
+
+/* Stil pentru containerul tabelului */
+.container {
+    text-align: center; /* Centrare orizontală a conținutului */
+}
+
+/* Stil pentru tabel */
+.table {
+    margin: 0 auto; /* Margin automat pe stânga și dreapta pentru a centra */
+    width: 80%; /* Lățimea tabelului */
+    margin-top: 100px; /* Spațiu suplimentar de la partea de sus */
+    margin-bottom: 50px;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+/* Adăugăm o clasă nouă pentru a gestiona animația tabelului */
+.slide-from-right {
+    animation: slideFromRight 0.5s ease forwards; /* Animatie care va aduce tabelul de la dreapta la pozitia sa corecta */
+  }
+  
+  @keyframes slideFromRight {
+    from {
+      transform: translateX(100%); /* Începutul animației: tabelul este complet în afara ecranului în partea dreaptă */
+    }
+    to {
+      transform: translateX(0); /* Sfârșitul animației: tabelul este adus înapoi la poziția sa corectă */
+    }
+  }
+  
+  /* Restul stilurilor rămân neschimbate */
+  
